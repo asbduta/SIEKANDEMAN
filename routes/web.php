@@ -21,13 +21,15 @@ Route::get('/index', function () {
 
     return view('app/index');
 });
+
+// Route::resource('managementguru','ManagementGuruController');
+
 // -------------------MANAGEMENT GURU ROUTE ----------------------------//
 Route::get('/managementguru','ManagementGuruController@index');
 Route::get('/managementguru-create','ManagementGuruController@create');
 Route::post('/managementguru.store','ManagementGuruController@store');
 Route::get('/managementguru-del/{id}','ManagementGuruController@destroy');
 Route::get('/managementguru-edit/{id}','ManagementGuruController@edit');
-Route::get('/managementguru-update/{id}','ManagementGuruController@update');
 //---------------MANAGEMENT SISWA ROUTE--------------------------------------//
 Route::get('/managementsiswa','ManagementSiswaController@index');
 Route::get('/managementsiswa-create','ManagementSiswaController@create');

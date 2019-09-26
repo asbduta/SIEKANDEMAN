@@ -6,7 +6,7 @@
             <h2>INPUT DATA GURU</h2>
         </div>
          <div class="body">
-             <form method="post" class="form-horizontal" action="{{url('/managementguru.store')}}">
+          <form class="form-horizontal mt-4"action="{{url('managementguru.store')}}" method="post" >
              	{{ csrf_field() }}
                  <div class="row clearfix">
                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5form-control-label">
@@ -31,19 +31,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row clearfix">
-                    	<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5form-control-label">
-                            <label for="foto">Foto</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="file" name="foto" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>                              
+                    </div>                            
                     <div class="row clearfix">
                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
                             <a href="{{url('/managementguru')}}" class="btn btn-primary m-t-20 waves-effect">Kembali</a>

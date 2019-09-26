@@ -37,14 +37,12 @@ class ManagementGuruController extends Controller
     {
         $this->validate($request,[
         'nama' =>'required',
-        'nip '=>'required',
-        'foto'=>'required'
+        'nip '=>'required'
        
        ]);
             guru::create([
         'nama' => $request->nama,
-        'nip '=> $request->nip,
-        'foto'=> $request->foto
+        'nip '=> $request->nip
           ]);
         return redirect('managementguru');
     }
@@ -88,13 +86,12 @@ class ManagementGuruController extends Controller
     $this->validate($request,[
         //'id'=>'required',
         'nama'=>'required',
-        'nip'=>'required',
-        'foto'=>'required'
+        'nip'=>'required'
+        
     ]);
     $data_guru = guru::find($request->id);
     $data_guru->nama=$request->nama;
     $data_guru->nip=$request->nip;
-    $data_guru->foto=$request->foto;
     $data_guru->save();
     return redirect('managementguru');
     }
