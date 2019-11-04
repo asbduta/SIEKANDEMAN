@@ -22,6 +22,12 @@ Route::get('/index', function () {
     return view('app/index');
 });
 
+Route::get('/kelas','ManagementKelasController@index');
+Route::get('/kelas/createkelas','ManagementKelasController@create');
+Route::post('/kelas/simpan','ManagementKelasController@store');
+// Route::resource('kelas','ManagementKelasController');
+
+
 // Route::resource('managementguru','ManagementGuruController');
 
 // -------------------MANAGEMENT GURU ROUTE ----------------------------//
